@@ -1,0 +1,366 @@
+/* Reset / baza */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #111827;
+    background-color: #f9fafb;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+/* Layout */
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    padding: 4rem 0;
+    background-color: #f3f4f6;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-intro {
+    max-width: 640px;
+    margin-bottom: 2rem;
+}
+
+.section-note {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Header / top nav */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0;
+}
+
+.logo-main {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.nav a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav a:hover {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+@media (max-width: 640px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Hero */
+
+.hero {
+    padding: 4rem 0 3rem;
+    background: radial-gradient(circle at top left, #e5e7eb, #f9fafb);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    margin-bottom: 1rem;
+}
+
+.hero-lead {
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 1.25rem;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+    background-color: #111827;
+    color: #f9fafb;
+    border-color: #111827;
+}
+
+.btn-primary:hover {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #111827;
+    border-color: #111827;
+}
+
+.btn-outline:hover {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    font-size: 0.95rem;
+}
+
+.info-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.info-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Services */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.3rem;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+    font-size: 0.95rem;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.service-card ul {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Projects */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    font-size: 0.9rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card figcaption {
+    padding: 0.75rem 1rem 1rem;
+    color: #4b5563;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Reviews */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.3rem;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+    font-size: 0.95rem;
+}
+
+.review-text {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.review-meta {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Kontakt */
+
+.contact-columns {
+    align-items: flex-start;
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.4rem;
+}
+
+.contact-note {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+/* Stopka */
+
+.site-footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 1.25rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-inner {
+    text-align: center;
+}
