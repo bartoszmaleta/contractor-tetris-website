@@ -51,13 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
             updateLightbox(currentIndex);
             lightbox.classList.add("is-open");
             lightbox.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
         }
 
         function closeLightbox() {
             lightbox.classList.remove("is-open");
             lightbox.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
         }
 
         function showNext(delta) {

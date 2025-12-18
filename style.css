@@ -407,20 +407,24 @@ html {
     position: relative;
     max-width: 960px;
     width: 100%;
-    max-height: 100%;
+    max-height: 90vh;          /* nigdy wyżej niż okno */
     background-color: #111827;
     border-radius: 0.75rem;
     padding: 1rem 1rem 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    overflow: auto;            /* jeśli treść > 90vh, pojawi się scroll w środku */
 }
 
 .lightbox-image {
     width: 100%;
+    max-height: 70vh;          /* obrazek dopasowany do viewportu */
     height: auto;
     border-radius: 0.5rem;
+    object-fit: contain;       /* zachowuje proporcje bez obcięcia */
 }
+
 
 .lightbox-caption {
     font-size: 0.9rem;
