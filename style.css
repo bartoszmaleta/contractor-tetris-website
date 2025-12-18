@@ -368,3 +368,129 @@ ul {
 html {
     scroll-behavior: smooth;
 }
+
+/* Animacje pojawiania się */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Lightbox */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: rgba(15, 23, 42, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 50;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-inner {
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+    max-height: 100%;
+    background-color: #111827;
+    border-radius: 0.75rem;
+    padding: 1rem 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.lightbox-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.lightbox-caption {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #e5e7eb;
+}
+
+.lightbox-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #e5e7eb;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Przycisk "do góry" */
+
+.back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #111827;
+    color: #f9fafb;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:not(.is-visible) {
+    transform: translateY(8px);
+}
+
+/* Aktywny link w nawigacji */
+
+.nav a.nav-link--active {
+    background-color: #f9fafb;
+    color: #111827;
+}
