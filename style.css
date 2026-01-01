@@ -498,3 +498,82 @@ html {
     background-color: #f9fafb;
     color: #111827;
 }
+
+/* Delikatne hover na kartach */
+
+.service-card,
+.project-card,
+.review-card {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.service-card:hover,
+.project-card:hover,
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+/* Subtelny efekt na przyciskach */
+
+.btn {
+    transition:
+            background-color 0.15s ease,
+            color 0.15s ease,
+            border-color 0.15s ease,
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+/* Lepsza widoczność aktywnego linku w menu */
+
+.nav a.nav-link--active {
+    background-color: #f9fafb;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Focus dla klawiatury (dostępność) */
+
+.nav a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+}
+
+.platform-badges {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.platform-label {
+    color: #4b5563;
+}
+
+.platform-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #111827;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, transform 0.15s ease;
+}
+
+.platform-badge:hover {
+    background-color: #111827;
+    color: #f9fafb;
+    transform: translateY(-1px);
+}
