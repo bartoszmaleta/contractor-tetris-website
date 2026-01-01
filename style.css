@@ -613,7 +613,13 @@ html {
 }
 
 .logo-image {
-    height: 40px;
+    height: 56px;   /* było 40px */
     width: auto;
     display: block;
+}
+
+@media (max-width: 640px) {
+    .logo-image {
+        height: 40px;   /* na mobile wróćmy do mniejszego rozmiaru */
+    }
 }
