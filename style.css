@@ -611,3 +611,9 @@ html {
     margin-bottom: 0;
     color: #4b5563;
 }
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
+}
